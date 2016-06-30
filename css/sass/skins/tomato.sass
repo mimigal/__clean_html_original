@@ -1,0 +1,50 @@
+@import "../bourbon/bourbon"
+
+$color: #FF6347 //Theme skin
+$text_color: #888
+$main_color: #222
+$bg_light: #f0ede6
+
+@mixin kerning($kerning)
+	letter-spacing: $kerning + px
+
+body
+	color: $main_color
+	
+a
+	color: $color
+
+p
+	color: $text_color
+
+.color_element
+	color: $color
+.color_bg
+	background-color: $color
+.color_border
+	border-color: $color
+
+.bg_light
+	background-color: $bg_light
+
+.bg_dark
+	background-color: $main_color
+	color: #fff
+
+.bg_dark .s_descr_wrap::after
+	background-color: #FFF
+	
+.main_color_bg
+	background-color: $main_color
+
+.top_mnu
+	a:hover
+		color: #df2809
+
+.top_text
+	p
+		color: $bg_light
+		+kerning(5)
+	h1
+		+kerning(2)		
+		
